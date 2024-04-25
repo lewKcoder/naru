@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 
-export type Dates = {
+export type DatesObject = {
   day: number;
   weekday: number;
   inThisMonth: boolean;
