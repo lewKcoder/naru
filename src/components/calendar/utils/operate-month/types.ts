@@ -1,15 +1,15 @@
-import { FunctionComponent } from "react";
 import { MonthAndYear } from "../../types";
 
 type Props = {
-  thisMonth: number;
-  thisYear: number;
   calendarDate: MonthAndYear;
   setCalendarDate: (
     arg: MonthAndYear | ((prevMonthAndYear: MonthAndYear) => MonthAndYear)
   ) => void;
+};
+
+type ReturnType = {
   previousMonth: () => void;
   nextMonth: () => void;
 };
 
-export type Component = FunctionComponent<Props>;
+export type Util = (args: Props) => ReturnType;
