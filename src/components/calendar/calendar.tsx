@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { FullDate, MonthAndYear, Dates, Component } from "./types";
 import { DaysOfWeek } from "./components/day-of-week";
+import { Header } from "./components/header";
 
 export const Calendar: Component = () => {
   const dateRaw = new Date();
-  const weekdays = ["日", "月", "火", "水", "木", "金", "土"];
 
   const thisYear = dateRaw.getFullYear();
   const thisMonth = dateRaw.getMonth() + 1;
@@ -93,56 +93,14 @@ export const Calendar: Component = () => {
 
   return (
     <div className="w-[320px] rounded-lg bg-gradient-to-r from-[#627594] to-[#a8b8d8] py-4 px-6 grid gap-3 text-white text-sm">
-      <div className="grid gap-4 grid-flow-col grid-cols-[1fr_auto] font-medium">
-        <span className="text-base">
-          {calendarDate.year}年{calendarDate.month}月
-        </span>
-
-        <div className="grid items-center grid-flow-col gap-8">
-          <button onClick={previousMonth}>
-            <svg
-              width="10"
-              height="18"
-              viewBox="0 0 10 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 17L1 9L9 1"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-          <button
-            onClick={() =>
-              setCalendarDate({ month: thisMonth, year: thisYear })
-            }
-            className="px-2 text-sm"
-          >
-            今日
-          </button>
-          <button onClick={nextMonth}>
-            <svg
-              width="10"
-              height="18"
-              viewBox="0 0 10 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 17L9 9L0.999999 1"
-                stroke="#fff"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </button>
-        </div>
-      </div>
+      <Header
+        thisMonth={thisMonth}
+        thisYear={thisYear}
+        calendarDate={calendarDate}
+        setCalendarDate={setCalendarDate}
+        previousMonth={previousMonth}
+        nextMonth={nextMonth}
+      />
 
       <DaysOfWeek />
 
