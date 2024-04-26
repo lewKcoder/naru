@@ -18,7 +18,7 @@ export default function Home() {
         <Calendar />
 
         <div className="w-52 grid grid-flow-row gap-4">
-          <div className="h-[70px] font-black text-[51px] text-center">
+          <div className="font-['Open_Sans'] h-[70px] font-black text-[51px] text-center">
             20:54
           </div>
 
