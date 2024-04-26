@@ -2,26 +2,19 @@ import { useState } from "react";
 import { FullDate, MonthAndYear, Component } from "./types";
 import { DaysOfWeek, Header, Dates } from "./components";
 import { InitDates } from "./utils/init-dates/init-dates";
-import { OperateMonth } from "./utils/operate-month/operate-month";
+import { useOperateMonth } from "./utils/use-operate-month/use-operate-month";
 
 const dateRaw = new Date();
 const thisYear = dateRaw.getFullYear();
 const thisMonth = dateRaw.getMonth() + 1;
 
 export const Calendar: Component = () => {
-  const [calendarDate, setCalendarDate] = useState<MonthAndYear>({
-    month: thisMonth,
-    year: thisYear,
-  });
-  const [selectedDate, setSelectedDate] = useState<FullDate>({
-    day: dateRaw.getDate(),
-    month: thisMonth,
-    year: thisYear,
-  });
-  const { previousMonth, nextMonth } = OperateMonth({
-    calendarDate,
-    setCalendarDate,
-  });
+  const { calendarDate, setCalendarDate, previousMonth, nextMonth } =
+    useOperateMonth({
+      thisMonth,
+      thisYear,
+    });
+
   const dates = InitDates(calendarDate);
 
   return (
@@ -43,8 +36,6 @@ export const Calendar: Component = () => {
         thisYear={thisYear}
         thisMonth={thisMonth}
         calendarDate={calendarDate}
-        selectedDate={selectedDate}
-        setSelectedDate={setSelectedDate}
       />
     </div>
   );

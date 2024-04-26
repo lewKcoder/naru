@@ -1,7 +1,14 @@
+import { useState } from "react";
 import { Util } from "./types";
+import { MonthAndYear } from "../../types";
 
-export const OperateMonth: Util = (props) => {
-  const { calendarDate, setCalendarDate } = props;
+export const useOperateMonth: Util = (props) => {
+  const { thisMonth, thisYear } = props;
+
+  const [calendarDate, setCalendarDate] = useState<MonthAndYear>({
+    month: thisMonth,
+    year: thisYear,
+  });
 
   const previousMonth = () => {
     if (calendarDate.month === 1) {
@@ -31,5 +38,5 @@ export const OperateMonth: Util = (props) => {
     }
   };
 
-  return { previousMonth, nextMonth };
+  return { previousMonth, nextMonth, calendarDate, setCalendarDate };
 };

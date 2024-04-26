@@ -5,9 +5,7 @@ type Props = {
   thisMonth: number;
   thisYear: number;
   calendarDate: MonthAndYear;
-  setCalendarDate: (
-    arg: MonthAndYear | ((prevMonthAndYear: MonthAndYear) => MonthAndYear)
-  ) => void;
+  setCalendarDate: (arg: MonthAndYear) => void;
   previousMonth: () => void;
   nextMonth: () => void;
 };

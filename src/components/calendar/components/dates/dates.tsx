@@ -1,15 +1,15 @@
+import { useState } from "react";
 import { Component } from "./types";
+import { FullDate } from "../../types";
 
 export const Dates: Component = (props) => {
-  const {
-    dates,
-    selectedDate,
-    setSelectedDate,
-    calendarDate,
-    dateRaw,
-    thisYear,
-    thisMonth,
-  } = props;
+  const { dates, calendarDate, dateRaw, thisYear, thisMonth } = props;
+
+  const [selectedDate, setSelectedDate] = useState<FullDate>({
+    day: dateRaw.getDate(),
+    month: thisMonth,
+    year: thisYear,
+  });
 
   return (
     <div className="grid grid-cols-7 gap-1">

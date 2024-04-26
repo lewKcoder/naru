@@ -1,13 +1,13 @@
 import { MonthAndYear } from "../../types";
 
 type Props = {
-  calendarDate: MonthAndYear;
-  setCalendarDate: (
-    arg: MonthAndYear | ((prevMonthAndYear: MonthAndYear) => MonthAndYear)
-  ) => void;
+  thisMonth: number;
+  thisYear: number;
 };
 
 type ReturnType = {
+  calendarDate: MonthAndYear;
+  setCalendarDate: (arg: MonthAndYear) => void;
   previousMonth: () => void;
   nextMonth: () => void;
 };
