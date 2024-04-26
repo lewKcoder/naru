@@ -8,7 +8,7 @@ export const TimerStartIcon: FunctionComponent = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <circle cx="243" cy="298" r="192" stroke="black" stroke-width="42" />
+      <circle cx="243" cy="298" r="192" stroke="black" strokeWidth="42" />
       <rect x="180" width="127" height="42" fill="black" />
       <rect x="218" y="42" width="47" height="53" fill="black" />
       <rect

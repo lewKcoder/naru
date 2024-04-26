@@ -14,9 +14,9 @@ export const ArrowIcon: Component = (props) => {
       <path
         d={svgPath}
         stroke="#fff"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
