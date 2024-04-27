@@ -18,7 +18,7 @@ export const Calendar: Component = () => {
   const dates = InitDates(calendarDate);
 
   return (
-    <div className="w-80 rounded-lg py-4 px-6 grid gap-3 text-white text-sm bg-gradient-to-r from-[#627594] to-[#a8b8d8] shadow-[0px_1px_24px_#0000001c]">
+    <div className="w-80 rounded-lg py-4 px-6 grid gap-3 text-white text-sm bg-gradient-to-r from-[#627594] to-[#a8b8d8] shadow-[0px_4px_10px_#0000001c]">
       <Header
         thisMonth={thisMonth}
         thisYear={thisYear}

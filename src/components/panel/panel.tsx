@@ -5,7 +5,7 @@ export const Panel: Component = (props) => {
 
   return (
     <div
-      className={`${customStyle}  rounded-lg shadow-[0px_1px_24px_#0000001c]`}
+      className={`${customStyle}  rounded-lg shadow-[0px_4px_10px_#0000001c]`}
     >
       {children}
     </div>
