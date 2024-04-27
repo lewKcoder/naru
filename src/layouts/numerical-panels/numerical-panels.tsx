@@ -10,7 +10,7 @@ export const NumericalPanels: FunctionComponent = () => {
     const timerId = setInterval(() => {
       setNowTime(new Date());
       setIsFlashColon((prev) => !prev);
-    }, 1000);
+    }, 500);
 
     return () => clearInterval(timerId);
   }, []);
