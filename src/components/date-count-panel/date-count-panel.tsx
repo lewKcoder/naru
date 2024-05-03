@@ -5,7 +5,7 @@ export const DateCountPanel: Component = (props) => {
   const { label, value, unit } = props;
 
   return (
-    <Panel customStyle="grid items-center px-[16px] bg-white h-[70px]">
+    <Panel customStyle="grid items-center px-[16px] h-[70px]">
       <div className="font-normal grid grid-flow-col justify-between items-center">
         <span className="text-sm">{label}：</span>
         <div>
