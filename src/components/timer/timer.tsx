@@ -9,11 +9,13 @@ export const Timer: FunctionComponent = () => {
   const { timer, isStarted, resetTimer, startTimer } = useOperateTimer($timer);
 
   return (
-    <Panel customStyle="px-[16px] py-[11px] bg-gradient-to-r from-[#627594] to-[#a8b8d8] text-white h-[70px]">
+    <Panel customStyle="px-[16px] py-[11px] bg-white h-[70px]">
       <div className="grid grid-flow-col gap-5 items-center">
         <button
           className={`w-7 h-7 rounded p-1 ${
-            isStarted ? "bg-white" : "bg-[#b3b3b3]"
+            isStarted
+              ? "shadow-[0_0_2px_#838383]"
+              : "shadow-[inset_0_0_8px_#ababab]"
           }`}
           onClick={resetTimer}
           disabled={!isStarted}
@@ -28,7 +30,9 @@ export const Timer: FunctionComponent = () => {
 
         <button
           className={`w-7 h-7 rounded p-1 ${
-            isStarted ? "bg-[#b3b3b3]" : "bg-white"
+            isStarted
+              ? "shadow-[inset_0_0_8px_#ababab]"
+              : "shadow-[0_0_2px_#838383]"
           }`}
           onClick={startTimer}
           disabled={isStarted}

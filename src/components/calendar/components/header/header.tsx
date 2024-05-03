@@ -13,7 +13,7 @@ export const Header: Component = (props) => {
 
   return (
     <div className="grid gap-4 grid-flow-col grid-cols-[1fr_auto] font-medium">
-      <span className="text-base">
+      <span className="text-base font-medium tracking-wide">
         {calendarDate.year}年{calendarDate.month}月
       </span>
 

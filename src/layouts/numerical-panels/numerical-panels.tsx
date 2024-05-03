@@ -27,18 +27,18 @@ export const NumericalPanels: FunctionComponent = () => {
 
       <Timer />
 
-      <Panel customStyle="grid items-center px-[16px] bg-gradient-to-r from-[#627594] to-[#a8b8d8] text-white h-[70px]">
+      <Panel customStyle="grid items-center px-[16px] bg-white h-[70px]">
         <div className="font-normal grid grid-flow-col justify-between items-center">
-          <span className="text-[#ffffffb3] text-sm">連続：</span>
+          <span className="text-sm">連続：</span>
           <div>
             <span className="text-2xl">24</span>
             <span className="pl-1">日目</span>
           </div>
         </div>
       </Panel>
-      <Panel customStyle="grid items-center px-[16px] bg-gradient-to-r from-[#627594] to-[#a8b8d8] text-white h-[70px]">
+      <Panel customStyle="grid items-center px-[16px] bg-white h-[70px]">
         <div className="font-normal grid grid-flow-col justify-between items-center">
-          <span className="text-[#ffffffb3] text-sm">合計：</span>
+          <span className="text-sm">合計：</span>
           <div>
             <span className="text-2xl">56</span>
             <span className="pl-1">日</span>

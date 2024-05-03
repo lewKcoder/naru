@@ -12,7 +12,7 @@ export const Dates: Component = (props) => {
   });
 
   return (
-    <div className="grid grid-cols-7 gap-1">
+    <div className="grid grid-cols-7 gap-1 text-[#000000de]">
       {dates.map(({ day, inThisMonth }, index) => (
         <div key={index} className="w-fit">
           <button
@@ -26,13 +26,13 @@ export const Dates: Component = (props) => {
                 selectedDate.month === calendarDate.month &&
                 selectedDate.year === calendarDate.year &&
                 inThisMonth &&
-                "bg-[#444f61]"
+                "bg-[#1976d2] text-white"
               } ${
                 dateRaw.getDate() === day &&
                 thisMonth === calendarDate.month &&
                 thisYear === calendarDate.year &&
                 inThisMonth &&
-                "border-[1px] border-[#d1dcf0] box-border"
+                "border-[1px] border-[#4c8bff] box-border"
               }
                   ${!inThisMonth && "text-transparent"}`}
             >

@@ -5,15 +5,15 @@ export const ArrowIcon: Component = (props) => {
 
   return (
     <svg
-      width="10"
-      height="18"
+      width="8"
+      height="16"
       viewBox="0 0 10 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         d={svgPath}
-        stroke="#fff"
+        stroke="#3F3F3F"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
