@@ -3,7 +3,7 @@ import { FunctionComponent } from "react";
 
 export const SideNavigation: FunctionComponent = () => {
   return (
-    <nav className="list-none grid grid-flow-row gap-6 [grid-template-rows:repeat(3,52px)]">
+    <nav className="list-none text-sm">
       <li>
         <LinkPanel href="/" label="成長ボード" isActive />
       </li>
