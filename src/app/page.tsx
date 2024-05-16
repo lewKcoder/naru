@@ -2,6 +2,7 @@
 
 import { Calendar } from "@/components/calendar";
 import { Head } from "@/components/head";
+import { KnowledgeBubble } from "@/components/knowledge-bubble";
 import { Panel } from "@/components/panel";
 import { Table } from "@/components/table";
 import { NumericalPanels } from "@/layouts/numerical-panels";
@@ -14,14 +15,18 @@ export default function Home() {
 
       <header className="border-b border-[#D9D9D9] h-16"></header>
 
-      <div className="grid grid-flow-col [grid-template-columns:227px_1fr] gap-9 p-5">
+      <div className="grid grid-flow-col grid-cols-[227px_1fr] gap-9 p-5">
         <SideNavigation />
 
         <div className="grid gap-4">
-          <div className="grid grid-flow-col gap-4 [grid-template-columns:320px_208px]">
-            <Calendar />
+          <div className="grid grid-flow-col grid-cols-[auto_1fr]">
+            <div className="grid grid-flow-col gap-4 grid-cols-[320px_208px]">
+              <Calendar />
 
-            <NumericalPanels />
+              <NumericalPanels />
+            </div>
+
+            <KnowledgeBubble />
           </div>
 
           <div className="grid grid-flow-col gap-4 grid-cols-[50%_auto]">
